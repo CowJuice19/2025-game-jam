@@ -1,14 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://iyxmymt68386"]
+[gd_scene load_steps=6 format=3 uid="uid://iyxmymt68386"]
 
 [ext_resource type="Script" path="res://stages/test/test.gd" id="1_qwtvd"]
 [ext_resource type="PackedScene" uid="uid://dq8qo4qvlvhwj" path="res://ui/hud/hud.tscn" id="2_a7jvq"]
 [ext_resource type="PackedScene" uid="uid://o0q0t4eik226" path="res://entities/characters/player/player.tscn" id="2_xlaae"]
 [ext_resource type="PackedScene" uid="uid://dn3bfbk078hey" path="res://ui/hud/dialogue/dialoguebox.tscn" id="4_mkodv"]
+[ext_resource type="Texture2D" uid="uid://bhvh26j4be4qn" path="res://graphics/backgrounds/background-artists-for-2d-beat-em-up-v0-33zjybqayuce1.webp" id="5_eklhe"]
 
 [node name="Test" type="Node2D"]
 script = ExtResource("1_qwtvd")
 
 [node name="Player" parent="." instance=ExtResource("2_xlaae")]
+position = Vector2(1073, -1)
 
 [node name="HUDCamera" type="Camera2D" parent="."]
 editor_draw_limits = true
@@ -16,3 +18,9 @@ editor_draw_limits = true
 [node name="HUD" parent="HUDCamera" instance=ExtResource("2_a7jvq")]
 
 [node name="DialogueBox" parent="." instance=ExtResource("4_mkodv")]
+
+[node name="Background-artists-for-2d-beat-em-up-v0-33Zjybqayuce1" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1519, -602)
+scale = Vector2(3.45689, 3.70801)
+texture = ExtResource("5_eklhe")

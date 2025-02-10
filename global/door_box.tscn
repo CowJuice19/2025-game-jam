@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://66xevetgfbf0"]
+
+[ext_resource type="Script" path="res://global/door_interact.gd" id="1_2tscc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrjke"]
+size = Vector2(199, 147)
+
+[node name="DoorBox" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_hrjke")
+script = ExtResource("1_2tscc")
+
+[node name="Button" type="Button" parent="Area2D"]
+offset_left = -96.0
+offset_top = -71.0
+offset_right = 97.0
+offset_bottom = 69.0
+text = "door"

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjuuf2d1c4om2"]
+
+[ext_resource type="Texture2D" uid="uid://bhvh26j4be4qn" path="res://graphics/backgrounds/background-artists-for-2d-beat-em-up-v0-33zjybqayuce1.webp" id="1_3qgf0"]
+
+[node name="Background" type="Node2D"]
+
+[node name="Background-artists-for-2d-beat-em-up-v0-33Zjybqayuce1" type="Sprite2D" parent="."]
+position = Vector2(460, 258)
+texture = ExtResource("1_3qgf0")
