@@ -64,10 +64,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		if is_instance_valid(ui_manager.game_over_menu_instance) and ui_manager.game_over_menu_instance.visible:
 			return
 			
-		if is_instance_valid(ui_manager.pause_menu_instance) and ui_manager.pause_menu_instance.visible:
-			ui_manager.hide_pause_menu()
-		else:
-			ui_manager.show_pause_menu()
+		ui_manager.handle_pause_input(event)
 
 func _notification(what: int) -> void:
 	if (what == NOTIFICATION_WM_WINDOW_FOCUS_OUT 

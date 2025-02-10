@@ -31,6 +31,16 @@ func start_dialogue(dialogue_data: Array):
 func is_dialogue_active() -> bool:
 	return dialogue_box.visible if dialogue_box else false
 
+func handle_pause_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		if is_instance_valid(game_over_menu_instance) and game_over_menu_instance.visible:
+			return
+			
+		if is_instance_valid(pause_menu_instance) and pause_menu_instance.visible:
+			hide_pause_menu()
+		else:
+			show_pause_menu()
+
 func show_pause_menu() -> void:
 	if !is_instance_valid(pause_menu_instance):
 		pause_menu_instance = pause_menu_scene.instantiate()
